@@ -1,0 +1,55 @@
+body,
+.mainContainer,
+.leftContainer,
+.diceContainer,
+.rightContainer,
+.buttonMenu {
+    display: flex;
+}
+
+.rightContainer,
+.leftContainer{
+    flex-direction: column;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+    .mainContainer {
+        width: 80%;
+        height: 90%;
+        background-color: aquamarine;
+    }
+
+        .leftContainer {
+            width: 75%;
+            height: 100%;
+            background-color: beige;
+        }
+
+            .diceContainer {
+                width: 100%;
+                height: 75%;
+                background-color: blueviolet;
+                border-radius: 20px;
+
+            }
+
+        .rightContainer {
+            background-color: antiquewhite;
+            flex: auto;
+            border-radius: 20px;
+        }
+
+            .instructions {
+                height: 20%;
+                background-color: lightgreen;
+            }
+
+            /* .results {
+
+            } */
