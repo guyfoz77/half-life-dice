@@ -17,19 +17,25 @@ function App() {
     setResults(newResults)
   }
 
-  // function rollDice20Times() {
-  //   const newResults = [...results]
-  //   const resultsToAdd = []
-  //   let newDiceRemaining = diceRemaining
-  //   for (let i = 0; i < 20; i++) {
-  //     newDiceRemaining -= halfLifeStep(newDiceRemaining, diceSides)
-  //     resultsToAdd.push(newDiceRemaining)
-  //   }
-  // }
+  function rollDice20Times() {
+    const newResults = [...results]
+    const resultsToAdd = []
+    let newDiceRemaining = diceRemaining
+    for (let i = 0; i < 20; i++) {
+      newDiceRemaining -= halfLifeStep(newDiceRemaining, diceSides)
+      resultsToAdd.push(newDiceRemaining)
+    }
+    resultsToAdd.forEach(result => {
+      newResults.push(result)
+    });
+    setDiceRemaining(newDiceRemaining)
+    setResults(newResults)
+  }
 
   return (
     <>
       <button onClick={rollDice}>Click</button>
+      <button onClick={rollDice20Times}>Roll 20 times</button>
       <ResultsTable results={results} />
     </>
   )
