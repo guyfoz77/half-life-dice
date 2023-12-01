@@ -15,6 +15,5 @@ export function halfLifeStep(startingDice, sides) {
     const diceResult = rollDice(sides)
     if (diceResult == 1) decayedDice++
   }
-  console.log(decayedDice)
-  // return decayedDice
+  return decayedDice
 }
