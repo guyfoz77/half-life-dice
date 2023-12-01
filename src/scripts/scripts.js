@@ -1,5 +1,3 @@
-import { rollData } from '../data/data'
-
 export function rollDice(sides) {
   if (sides <= 1) {
     console.error('A die must have at least 2 sides')
