@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import { rollDice, halfLifeStep } from './scripts/scripts'
+import { halfLifeStep } from './scripts/scripts'
 import { ResultsTable } from './components/ResultsTable'
+import { Graph } from './components/Graph'
 
 function App() {
   const diceSides = 10
@@ -56,6 +57,7 @@ function App() {
         <input type='number' id='numberOfDice' min={1} max={100000} defaultValue={100} onChange={(e) => handleNumberOfDiceChange(e)} />
       </form>
       <ResultsTable results={results} />
+      <Graph data={results} />
     </>
   )
 }
