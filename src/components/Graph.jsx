@@ -45,6 +45,9 @@ export function Graph({ data }) {
   };
 
   return (
-    <Line data={chartData} options={options} />
+    <div className="graphComponent">
+      <h4>Graph</h4>
+      <Line data={chartData} options={options} />
+    </div>
   )
 }

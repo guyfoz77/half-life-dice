@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.diceContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+  gap: 10px;
+}
+
+.dice {
+  text-align: center;
+}
+
+.dice1 {
+  background-color: darkgreen;
+}
