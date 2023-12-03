@@ -1,8 +1,14 @@
+import { useState } from "react"
+
 export function ResultsTable({ results }) {
+  const [show, setShow] = useState(true)
+  function handleShowHide() {
+    setShow(!show)
+  }
   return (
     <div className="resultsTableComponent">
-      <h4>Results</h4>
-      <table>
+      <h4 onClick={handleShowHide}>Results</h4>
+      {show && <table>
         <thead>
           <tr>
             <th>Roll Number</th>
@@ -17,7 +23,7 @@ export function ResultsTable({ results }) {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>}
     </div>
   )
 }

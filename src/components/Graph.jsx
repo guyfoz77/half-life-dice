@@ -1,9 +1,14 @@
 import { Line } from "react-chartjs-2"
 // eslint-disable-next-line no-unused-vars
 import { Chart } from "chart.js/auto";
+import { useState } from "react";
 
 export function Graph({ data }) {
   const colors = { points: 'rgba(75,192,192,1)', text: '#adadad' }
+  const [show, setShow] = useState(true)
+  function handleShowHide() {
+    setShow(!show)
+  }
 
   const chartData = {
     labels: data.map((_, index) => index),
@@ -46,8 +51,8 @@ export function Graph({ data }) {
 
   return (
     <div className="graphComponent">
-      <h4>Graph</h4>
-      <Line data={chartData} options={options} />
+      <h4 onClick={handleShowHide}>Graph</h4>
+      {show && <Line data={chartData} options={options} />}
     </div>
   )
 }

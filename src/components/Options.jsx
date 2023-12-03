@@ -1,8 +1,14 @@
+import { useState } from "react"
+
 export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceSides }) {
+  const [show, setShow] = useState(true)
+  function handleShowHide() {
+    setShow(!show)
+  }
   return (
     <div className="optionsComponent">
-      <h4></h4>
-      <form action="">
+      <h4 onClick={handleShowHide}>Options</h4>
+      {show && <form action="">
         <label htmlFor='numberOfDice'>Number of dice:</label>
         <select defaultValue={100} id="numberOfDice" onChange={(e) => handleNumberOfDiceChange(e)}>
           <option value={10}>10</option>
@@ -21,7 +27,7 @@ export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceS
           defaultValue={6}
           onChange={(e) => handleDiceSidesChange(e)}
         />
-      </form>
+      </form>}
     </div>
   )
 }
