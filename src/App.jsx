@@ -52,11 +52,10 @@ function App() {
   function handleNumberOfDiceChange(e) {
     const newNumber = e.target.value
     console.log(newNumber)
-    const newNumberProcessed = Math.min(Math.max(0, Math.floor(newNumber)), 9999999) //number must be a positive integer
-    e.target.value = newNumberProcessed
-    setInitialDice(newNumberProcessed)
-    setDice(initialDiceSetup(newNumberProcessed))
-    setResults([newNumberProcessed])
+    e.target.value = newNumber
+    setInitialDice(newNumber)
+    setDice(initialDiceSetup(newNumber))
+    setResults([newNumber])
   }
 
   return (
@@ -66,7 +65,13 @@ function App() {
       <button onClick={reset}>Reset</button>
       <form action="">
         <label htmlFor='numberOfDice'>Number of dice:</label>
-        <input type='number' id='numberOfDice' min={1} max={100000} defaultValue={100} onChange={(e) => handleNumberOfDiceChange(e)} />
+        <select defaultValue={100} id="numberOfDice" onChange={(e) => handleNumberOfDiceChange(e)}>
+          <option value={10}>10</option>
+          <option value={100}>100</option>
+          <option value={1000}>1000</option>
+          <option value={10000}>10000</option>
+          <option value={100000}>100000</option>
+        </select>
       </form>
       <ResultsTable results={results} />
       <Graph data={results} />
