@@ -4,7 +4,7 @@ import { ResultsTable } from './components/ResultsTable'
 import { Graph } from './components/Graph'
 
 function App() {
-  const diceSides = 10
+  const [diceSides, setDiceSices] = useState(6)
   const [initialDice, setInitialDice] = useState(100)
   const [dice, setDice] = useState(initialDiceSetup)
   const [results, setResults] = useState([initialDice])
@@ -29,20 +29,20 @@ function App() {
     setDice(newDice)
   }
 
-  function rollDice20Times() {
-    // const newResults = [...results]
-    // const resultsToAdd = []
-    // let newDiceRemaining = diceRemaining
-    // for (let i = 0; i < 20; i++) {
-    //   newDiceRemaining -= halfLifeStep(newDiceRemaining, diceSides)
-    //   resultsToAdd.push(newDiceRemaining)
-    // }
-    // resultsToAdd.forEach(result => {
-    //   newResults.push(result)
-    // });
-    // setDiceRemaining(newDiceRemaining)
-    // setResults(newResults)
-  }
+  // function rollDice20Times() {
+  //   // const newResults = [...results]
+  //   // const resultsToAdd = []
+  //   // let newDiceRemaining = diceRemaining
+  //   // for (let i = 0; i < 20; i++) {
+  //   //   newDiceRemaining -= halfLifeStep(newDiceRemaining, diceSides)
+  //   //   resultsToAdd.push(newDiceRemaining)
+  //   // }
+  //   // resultsToAdd.forEach(result => {
+  //   //   newResults.push(result)
+  //   // });
+  //   // setDiceRemaining(newDiceRemaining)
+  //   // setResults(newResults)
+  // }
 
   function reset() {
     setDice(initialDiceSetup())
@@ -51,13 +51,17 @@ function App() {
 
   function handleNumberOfDiceChange(e) {
     const newNumber = e.target.value
-    console.log(newNumber)
-    e.target.value = newNumber
     setInitialDice(newNumber)
     setDice(initialDiceSetup(newNumber))
     setResults([newNumber])
   }
-
+  function handleDiceSidesChange(e) {
+    const newSides = e.target.value
+    console.log(newSides)
+    setDice(initialDiceSetup())
+    setDiceSices(newSides)
+    setResults([initialDice])
+  }
   return (
     <>
       <button onClick={rollDice}>Roll</button>
@@ -72,6 +76,16 @@ function App() {
           <option value={10000}>10000</option>
           <option value={100000}>100000</option>
         </select>
+        <label htmlFor='diceSides'>Number of sides on dice: {diceSides}</label>
+        <input
+          type="range"
+          id="diceSides"
+          min="2"
+          max="20"
+          step="1"
+          defaultValue={6}
+          onChange={(e) => handleDiceSidesChange(e)}
+        />
       </form>
       <ResultsTable results={results} />
       <Graph data={results} />
