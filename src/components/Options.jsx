@@ -17,7 +17,9 @@ export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceS
           <option value={10000}>10000</option>
           {/* <option value={100000}>100000</option> */}
         </select>
-        <label htmlFor='diceSides'>Number of sides on dice: {diceSides}</label>
+        <label htmlFor='diceSides'>
+          {(diceSides == 2) ? 'Using a coin.' : `Using ${diceSides} sided dice.`}
+        </label>
         <input
           type="range"
           id="diceSides"

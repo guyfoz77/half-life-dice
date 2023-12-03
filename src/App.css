@@ -3,23 +3,24 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 100vh;
 }
 
 .mainContainer {
   display: grid;
   grid-template-columns: 20% 80%;
+  gap: 10px;
+  max-width: 1000px;
 }
 
-.creditsComponent,
-.buttonsComponent,
-.optionsComponent {
-  grid-column: 1;
+.leftSide {
+  display: flex;
+  flex-direction: column;
 }
 
-.resultsTableComponent,
-.graphComponent,
-.diceComponent {
-  grid-column: 2;
+.rightSide {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=App.css.map */

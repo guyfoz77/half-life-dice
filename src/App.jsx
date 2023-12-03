@@ -67,17 +67,21 @@ function App() {
   }
   return (
     <div className='mainContainer'>
-      <Credits />
-      <Buttons
-        rollDice={rollDice}
-        reset={reset} />
-      <Options
-        handleNumberOfDiceChange={handleNumberOfDiceChange}
-        handleDiceSidesChange={handleDiceSidesChange}
-        diceSides={diceSides} />
-      <ResultsTable results={results} />
-      <Graph data={results} />
-      <Material dice={dice} />
+      <div className='leftSide'>
+        <Credits />
+        <Buttons
+          rollDice={rollDice}
+          reset={reset} />
+        <Options
+          handleNumberOfDiceChange={handleNumberOfDiceChange}
+          handleDiceSidesChange={handleDiceSidesChange}
+          diceSides={diceSides} />
+      </div>
+      <div className='rightSide'>
+        <ResultsTable results={results} />
+        <Graph data={results} />
+        <Material dice={dice} />
+      </div>
     </div>
   )
 }
