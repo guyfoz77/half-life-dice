@@ -1,6 +1,7 @@
 export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceSides }) {
   return (
     <div className="optionsComponent">
+      <h4></h4>
       <form action="">
         <label htmlFor='numberOfDice'>Number of dice:</label>
         <select defaultValue={100} id="numberOfDice" onChange={(e) => handleNumberOfDiceChange(e)}>

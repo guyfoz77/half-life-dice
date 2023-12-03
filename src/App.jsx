@@ -5,6 +5,7 @@ import { Graph } from './components/Graph'
 import { Material } from './components/Material'
 import { Options } from './components/Options'
 import { Buttons } from './components/Buttons'
+import { Credits } from './components/Credits'
 
 function App() {
   const [diceSides, setDiceSices] = useState(6)
@@ -67,6 +68,7 @@ function App() {
   }
   return (
     <>
+      <Credits />
       <Buttons
         rollDice={rollDice}
         reset={reset} />
