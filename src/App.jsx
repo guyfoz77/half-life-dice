@@ -4,6 +4,7 @@ import { ResultsTable } from './components/ResultsTable'
 import { Graph } from './components/Graph'
 import { Material } from './components/Material'
 import { Options } from './components/Options'
+import { Buttons } from './components/Buttons'
 
 function App() {
   const [diceSides, setDiceSices] = useState(6)
@@ -66,9 +67,9 @@ function App() {
   }
   return (
     <>
-      <button onClick={rollDice}>Roll</button>
-      {/* <button onClick={rollDice20Times}>Roll 20 times</button> */}
-      <button onClick={reset}>Reset</button>
+      <Buttons
+        rollDice={rollDice}
+        reset={reset} />
       <Options
         handleNumberOfDiceChange={handleNumberOfDiceChange}
         handleDiceSidesChange={handleDiceSidesChange}

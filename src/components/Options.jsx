@@ -8,7 +8,7 @@ export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceS
           <option value={100}>100</option>
           <option value={1000}>1000</option>
           <option value={10000}>10000</option>
-          <option value={100000}>100000</option>
+          {/* <option value={100000}>100000</option> */}
         </select>
         <label htmlFor='diceSides'>Number of sides on dice: {diceSides}</label>
         <input
