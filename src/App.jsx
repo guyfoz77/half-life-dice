@@ -6,6 +6,7 @@ import { Material } from './components/Material'
 import { Options } from './components/Options'
 import { Buttons } from './components/Buttons'
 import { Credits } from './components/Credits'
+import './App.css'
 
 function App() {
   const [diceSides, setDiceSices] = useState(6)
@@ -20,7 +21,6 @@ function App() {
   }
 
   function rollDice() {
-    console.log(dice)
     const newDice = [...dice]
     const newResults = [...results]
     for (let i = 0; i < newDice.length; i++) {
@@ -61,13 +61,12 @@ function App() {
   }
   function handleDiceSidesChange(e) {
     const newSides = e.target.value
-    console.log(newSides)
     setDice(initialDiceSetup())
     setDiceSices(newSides)
     setResults([initialDice])
   }
   return (
-    <>
+    <div className='mainContainer'>
       <Credits />
       <Buttons
         rollDice={rollDice}
@@ -79,7 +78,7 @@ function App() {
       <ResultsTable results={results} />
       <Graph data={results} />
       <Material dice={dice} />
-    </>
+    </div>
   )
 }
 

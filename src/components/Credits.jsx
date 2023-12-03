@@ -10,7 +10,7 @@ export function Credits() {
     >
       <img src={githubImage} aria-description='github mark' />
       <p>
-        <i>Made by Guy Foster</i>
+        <i>G Foster</i>
       </p>
     </a>
   )
