@@ -1,3 +1,4 @@
+@use "toolbox";
 @use "Material";
 
 :root {
@@ -7,7 +8,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: toolbox.$dark-color;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,11 +18,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  // color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  // color: #535bf2;
 }
 
 body {
@@ -44,12 +45,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: toolbox.$vdark-color;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: toolbox.$accent-color;
 }
 button:focus,
 button:focus-visible {
@@ -88,9 +89,22 @@ button:focus-visible {
 .leftSide {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .rightSide {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.component {
+  padding: 10px;
+  border: solid toolbox.$light-color;
+  border-radius: 10px;
+
+  h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+  }
 }

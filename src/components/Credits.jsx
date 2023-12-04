@@ -4,7 +4,7 @@ export function Credits() {
   return (
     <div className="creditsComponent component">
       <a
-        className='githubLinkContainer component'
+        className='githubLinkContainer'
         href='https://github.com/guyfoz77'
         target='_blank'
         rel='noreferrer'
