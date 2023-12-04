@@ -6,7 +6,7 @@ export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceS
     setShow(!show)
   }
   return (
-    <div className="optionsComponent">
+    <div className="optionsComponent component">
       <h4 onClick={handleShowHide}>Options</h4>
       {show && <form action="">
         <label htmlFor='numberOfDice'>Number of dice:</label>

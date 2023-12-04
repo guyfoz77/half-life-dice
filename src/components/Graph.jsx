@@ -50,7 +50,7 @@ export function Graph({ data }) {
   };
 
   return (
-    <div className="graphComponent">
+    <div className="graphComponent component">
       <h4 onClick={handleShowHide}>Graph</h4>
       {show && <Line data={chartData} options={options} />}
     </div>

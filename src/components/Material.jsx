@@ -7,7 +7,7 @@ export function Material({ dice }) {
   }
 
   return (
-    <div className="diceComponent">
+    <div className="diceComponent component">
       <h4 onClick={handleShowHide}>Dice</h4>
       {show && <div className="diceContainer">
         {dice.map((number, index) => (

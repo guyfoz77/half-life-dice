@@ -6,7 +6,7 @@ export function ResultsTable({ results }) {
     setShow(!show)
   }
   return (
-    <div className="resultsTableComponent">
+    <div className="resultsTableComponent component">
       <h4 onClick={handleShowHide}>Results</h4>
       {show && <table>
         <thead>
