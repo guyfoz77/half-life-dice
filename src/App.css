@@ -48,6 +48,24 @@
   border-bottom: solid rgb(92, 92, 92);
 }
 
+.creditsComponent a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #adadad;
+}
+.creditsComponent a img {
+  height: 25px;
+}
+.creditsComponent a p {
+  margin: 0;
+}
+.creditsComponent a:hover,
+.creditsComponent a:active {
+  color: #646cff;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -60,11 +78,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  text-decoration: inherit;
 }
 
 body {

@@ -1,0 +1,21 @@
+@use "toolbox";
+
+.creditsComponent {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: toolbox.$light-color;
+    img {
+      height: 25px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  a:hover,
+  a:active {
+    color: toolbox.$accent-color;
+  }
+}
