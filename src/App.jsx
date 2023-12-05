@@ -76,9 +76,9 @@ function App() {
           handleNumberOfDiceChange={handleNumberOfDiceChange}
           handleDiceSidesChange={handleDiceSidesChange}
           diceSides={diceSides} />
+        <ResultsTable results={results} />
       </div>
       <div className='rightSide'>
-        <ResultsTable results={results} />
         <Graph data={results} />
         <Material dice={dice} />
       </div>

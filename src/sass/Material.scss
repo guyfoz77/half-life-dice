@@ -1,10 +1,22 @@
+.diceComponent {
+}
+
 .diceContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(25px, 1fr));
+  gap: 5px;
+  width: auto;
+  overflow: auto;
+  max-height: 500px;
+  padding: 5px;
 
   .dice {
     text-align: center;
+    aspect-ratio: 1;
+    width: 25px;
+
+    border: solid rgb(92, 92, 92);
+    border-radius: 10px;
   }
 
   .dice1 {
