@@ -1,2 +1,11 @@
 .optionsComponent {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    input[type="range"] {
+      align-self: stretch;
+    }
+  }
 }

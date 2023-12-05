@@ -18,6 +18,16 @@
   background-color: darkgreen;
 }
 
+.optionsComponent form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.optionsComponent form input[type=range] {
+  align-self: stretch;
+}
+
 .buttonsComponent {
   display: flex;
   justify-content: center;
@@ -106,7 +116,7 @@ span {
 
 .mainContainer {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: minmax(200px, 30%) 600px;
   gap: 10px;
   padding: 10px;
   max-width: 1000px;
