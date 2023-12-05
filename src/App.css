@@ -56,10 +56,14 @@
   color: #adadad;
 }
 .creditsComponent a img {
+  transition: transform 0.3s ease-in-out;
   height: 25px;
 }
 .creditsComponent a p {
   margin: 0;
+}
+.creditsComponent a:hover img {
+  transform: rotate(360deg) scale(1.2);
 }
 .creditsComponent a:hover,
 .creditsComponent a:active {

@@ -8,11 +8,16 @@
     text-decoration: none;
     color: toolbox.$light-color;
     img {
+      transition: transform 0.3s ease-in-out;
       height: 25px;
     }
     p {
       margin: 0;
     }
+  }
+
+  a:hover img {
+    transform: rotate(360deg) scale(1.2);
   }
   a:hover,
   a:active {
