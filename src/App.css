@@ -18,6 +18,15 @@
   background-color: darkgreen;
 }
 
+.buttonsComponent {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.buttonsComponent button {
+  width: 80px;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -123,6 +132,7 @@ span {
 .component h4 {
   margin: 0 0 10px 0;
   font-size: 1.1em;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=App.css.map */

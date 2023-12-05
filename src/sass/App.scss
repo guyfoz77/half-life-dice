@@ -1,5 +1,7 @@
 @use "toolbox";
 @use "Material";
+@use "Options";
+@use "Buttons";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -111,5 +113,6 @@ span {
   h4 {
     margin: 0 0 10px 0;
     font-size: 1.1em;
+    cursor: pointer;
   }
 }
