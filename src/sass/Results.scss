@@ -1,0 +1,11 @@
+.resultsTableComponent {
+  max-height: 450px;
+  overflow: auto;
+
+  table {
+    text-align: left;
+    th {
+      border-bottom: solid rgb(92, 92, 92);
+    }
+  }
+}
