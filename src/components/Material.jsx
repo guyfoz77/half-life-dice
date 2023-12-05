@@ -8,7 +8,10 @@ export function Material({ dice }) {
 
   return (
     <div className="diceComponent component">
-      <h4 onClick={handleShowHide}>Dice</h4>
+      <h4 onClick={handleShowHide}>Dice
+        <span className="material-symbols-outlined">
+          {(show) ? 'expand_more' : 'expand_less'}
+        </span></h4>
       {show && <div className="diceContainer">
         {dice.map((number, index) => (
           <div key={index} className={`dice dice${number}`}>{number}</div>

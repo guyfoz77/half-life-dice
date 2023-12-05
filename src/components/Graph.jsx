@@ -51,7 +51,10 @@ export function Graph({ data }) {
 
   return (
     <div className="graphComponent component">
-      <h4 onClick={handleShowHide}>Graph</h4>
+      <h4 onClick={handleShowHide}><span>Graph</span>
+        <span className="material-symbols-outlined">
+          {(show) ? 'expand_more' : 'expand_less'}
+        </span></h4>
       {show && <Line data={chartData} options={options} />}
     </div>
   )

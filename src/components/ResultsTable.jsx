@@ -7,7 +7,10 @@ export function ResultsTable({ results }) {
   }
   return (
     <div className="resultsTableComponent component">
-      <h4 onClick={handleShowHide}>Results</h4>
+      <h4 onClick={handleShowHide}><span>Results</span>
+        <span className="material-symbols-outlined">
+          {(show) ? 'expand_more' : 'expand_less'}
+        </span></h4>
       {show && <table>
         <thead>
           <tr>

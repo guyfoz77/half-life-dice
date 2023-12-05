@@ -7,7 +7,10 @@ export function Options({ handleNumberOfDiceChange, handleDiceSidesChange, diceS
   }
   return (
     <div className="optionsComponent component">
-      <h4 onClick={handleShowHide}>Options</h4>
+      <h4 onClick={handleShowHide}>Options
+        <span className="material-symbols-outlined">
+          {(show) ? 'expand_more' : 'expand_less'}
+        </span></h4>
       {show && <form action="">
         <label htmlFor='numberOfDice'>Number of dice:</label>
         <select defaultValue={100} id="numberOfDice" onChange={(e) => handleNumberOfDiceChange(e)}>
